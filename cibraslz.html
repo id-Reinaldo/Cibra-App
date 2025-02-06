@@ -1,0 +1,518 @@
+<!doctype html>
+<html>
+<head>
+<title>CIBRA SLZ</title>
+<meta name="description" content="Aplicativo auxiliar" />
+<meta name="robots" content="all,index,follow" /><meta name = "viewport" content = "initial-scale = 1.1, user-scalable = no"><meta charset="UTF-8" />
+<link rel="manifest" href="cibra.json">
+<link id=ico "apple-touch-icon" href="https://www.socialcreator.com/srv/imgs/gen/79765_ico.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="CIBRA SLZ">
+<link rel="stylesheet" href="style.css" type="text/css">
+<link rel="stylesheet" href="font1.css" type="text/css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.w3-animate-opacity{-webkit-animation:opac 1s;animation:opac 1s}
+@-webkit-keyframes opac{from{opacity:0} to{opacity:1}}
+@keyframes opac{from{opacity:0} to{opacity:1}}
+html{min-height:100%;}
+body
+{
+margin:0px;padding:0px;font-family:Roboto;background-color:#E8F5E9;    background-image: url("https://www.socialcreator.com/srv/imgs/gen/79765_fondo.png");
+    background-size:cover;background-position:center;background-repeat:no-repeat;}
+h1.cab{margin-left:10px;color:#1B5E20;}
+h3.cab{margin-left:10px;color:#388E3C;}
+.txtgen{font-size:18px;}
+.txtgen2{font-size:16px;}
+@media all and (max-width: 460px)
+{
+    h1.cab{font-size:22px;}
+    h3.cab{font-size:16px;}
+    .txtgen{font-size:16px;}
+    .txtgen2{font-size:16px;}
+}
+.topcmain{border:0px;transition:background-color 0.2s ease;white-space:nowrap;cursor:pointer;}
+.topcmain:hover{background-color:#939393;}
+@media all and (max-width: 790px)
+{
+    .topcmain:hover{background-color:#87b889;}
+}
+hr{position:inherit;height: 1px;border: 0;border-top: 1px solid;margin: 1em 0;padding: 0;}
+.brillar{opacity: 0.7;transition:opacity 0.2s ease;}
+.brillar:hover{opacity: 1;}
+.boton1{
+    padding:10px;
+    font-size:18px;
+    font-family:Roboto;
+    cursor:pointer;
+    transition:background-color 0.2s ease;
+    color:#FFFFFF;
+    background-color:#4CAF50;
+}
+.boton1:hover{background-color:#6acd6e;}
+.somb{box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+.tit_card{font-size:18px;margin:5px;color:#2E7D32;}
+.subtit_card{font-size:14px;margin:5px;color:#43A047;}
+.fecha_card{font-size:14px;margin:5px;color:#4CAF50;}
+.tprodimgs{width:500px;}
+.tprodflecha{left:462px;}
+.mySlidesProd{max-width:490px;}
+.divmapa{width:500px;}
+.videoprod{width:500px;height:375px;}
+@media all and (max-width: 500px)
+{
+    .tprodimgs{width:250px;}
+    .tprodflecha{left:212px;}
+    .mySlidesProd{max-width:240px;}
+    .divmapa{width:250px;}
+    .videoprod{width:250px;height:188px;}
+}
+.videoWrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+}
+.videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width:600px;
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+    .mySlides {display:none}
+    .ss-badge {height:13px;width:13px;padding:0;cursor:pointer;background-color:#666666;}
+    * {
+        box-sizing: border-box;
+    }
+    .row-grid:after {
+        content: "";
+        clear: both;
+        display: block;
+    }
+    [class*="col-"] {
+        float: left;
+        padding: 15px;
+        width: 100%;
+    }
+    @media only screen and (min-width: 791px) {
+        .col-2 {width: 50%;}
+        .col-3 {width: 33.33%;}
+        .col-4 {width: 25%;}
+        .col-5 {width: 20%;}
+        .col-6 {width: 16.66%;}
+        .col-7 {width: 14.28%;}
+        .col-8 {width: 12.5%;}
+    }
+    
+        .centrado1{float:left;position:relative;left:50%;}
+    .centrado2{float:left;position:relative;left:-50%;}
+        @media only screen and (min-width: 791px) {
+        .col-22 {width: auto;}
+    }
+    
+    @media only screen and (min-width: 1116px) {
+        .col-33 {width: auto;}
+    }
+    .hoverlight:hover{box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.2);}
+    .av_cr{color:#666666;font-size:12px!important;position:relative;top:-1px;cursor:pointer;}
+    .av_ci{color:#CC0000;font-size:9px!important;position:relative;top:-2px;}
+    @media all and (min-width: 791px)
+    {
+        #tcab{height:80px;}
+        #tcab_td_aux{height:80px;}
+        #imgcab{max-height:76px;}        #lema{font-weight:bold;font-size:24px;}        .icotop_2{font-size:14px;position:absolute;top:12px;right:108px;}
+        .icotop_22{font-size:14px;position:absolute;top:12px;right:5px;}
+        .tdicotop{padding:15px;font-size:24px;color:#9E9E9E;}
+        #avisos{position:absolute;top:40px;right:5px;z-index:99;display:none;}
+        
+                    #tcab_aux{display:none;}
+                    #btnatras{display:none;}
+                    #btnslide{display:none;}
+            }
+    @media all and (max-width: 790px)
+    {
+        #tcab{height:40px;}
+        #tcab_td_aux{height:40px;}
+        #imgcab{max-height:36px;}        #lema{font-weight:bold;font-size:12px;}        .icotop_2{font-size:10px;position:absolute;top:2px;right:73px;}
+        .icotop_22{font-size:10px;position:absolute;top:2px;right:5px;}
+        .tdicotop{padding:10px;font-size:15px;color:#9E9E9E;}
+        #avisos{position:absolute;top:35px;right:5px;z-index:99;display:none;}
+                        #tcab{position:fixed;top:0px;}
+                #tcab_aux{display:inline;}
+                    #btnatras{display:none;}
+            }
+    .topcmain_sl{border:0px;transition:background-color 0.2s ease;white-space:nowrap;cursor:pointer;width:100%;}
+            #tslide_2{background-color:#FAFAFA;color:#000000;}
+        .topcmain_sl:hover{background-color:#EEEEEE;}
+            @media all and (max-width: 790px)
+        {
+            #tslide_2{background-color:#A5D6A7;color:#212121;}
+            .topcmain_sl:hover{background-color:#87b889;}
+        }
+        #tmenu{background-color:#A5D6A7;color:#212121;border:0px;width:100%;z-index:99;}
+    #tmenu_2{border:0px;};
+    #tmenu_aux{border:0px;}
+    @media all and (min-width: 791px)
+    {
+        #tmenu{background-color:#757575;color:#FAFAFA;}
+                    table.defecto{
+                position: static ;
+            }
+            table.fijo{
+                position: fixed ;
+                top: 0px ;
+            }
+            table.defecto_aux{
+                display:none ;
+            }
+            table.fijo_aux{
+                display:inline ;
+            }
+            #tmenu_td_aux{height:60px;}
+        #tmenu_2{width:1%;}            .imgmenu{height:30px;}
+            .imgmenu2{max-height:28px;}
+                    .txtmenu{height:30px;}
+        
+    }
+    
+    @media all and (max-width: 790px)
+    {
+                    table.defecto{
+                display:none ;
+            }
+            table.fijo{
+                display:none ;
+            }
+            table.defecto_aux{
+                display:none ;
+            }
+            table.fijo_aux{
+                display:none ;
+            }
+                    .imgmenu{height:26px;}
+            .imgmenu2{max-height:24px;}
+                    .txtmenu{height:26px;}
+            }
+</style>
+<script src="https://www.socialcreator.com/jquery-1.11.3.min.js"></script>
+<script src="https://www.socialcreator.com/dom/js_getCookie.js"></script>
+<script language="javascript">
+$(document).ready(function(){
+    $(document).click(function() {
+        $("#avisos").hide();
+    });
+});
+function fcaddia(d_str,idaviso)
+{
+    var d_aux = new Date(2000+parseInt(d_str.substr(4,2)),parseInt(d_str.substr(2,2))-1,parseInt(d_str.substr(0,2)),parseInt(d_str.substr(6,2)),parseInt(d_str.substr(8,2)));
+    d_aux.setMinutes(d_aux.getMinutes() - d_aux.getTimezoneOffset());
+    d_aux_3.setHours(0,0,0,0);
+    var cad_dia="";
+    var today=new Date();
+    today.setHours(0,0,0,0);
+    var yesterday=new Date(today);
+    yesterday.setDate(yesterday.getDate()-1)
+    if(d_aux_3.getTime()==today.getTime()){cad_dia="Today";}
+    else if(d_aux_3.getTime()==yesterday.getTime()){cad_dia="Yesterday";}
+    else
+    {
+        var dia_aux=d_aux_3.getDate();if(dia_aux<10){dia_aux="0"+dia_aux;};
+        var mes_aux=d_aux_3.getMonth()+1;if(mes_aux<10){mes_aux="0"+mes_aux;};
+                    cad_dia=mes_aux+"-"+dia_aux+"-"+d_aux_3.getFullYear();
+            };
+    var h_aux=d_aux.getHours();if(h_aux<10){h_aux="0"+h_aux;};
+    var mi_aux=d_aux.getMinutes();if(mi_aux<10){mi_aux="0"+mi_aux;};
+    cad_dia+=" "+h_aux+":"+mi_aux;
+    $(".fh"+idaviso).html(cad_dia);
+};
+function fvisto(id)
+{
+    $(".av_ci"+id).hide();
+    $(".av_cr"+id).hide();
+    var n_aux=$("#av_nnuevos").html()-1;
+    if(n_aux==0){$("#av_nnuevos").hide();}
+    else{$("#av_nnuevos").html(n_aux);};
+    $.ajax({
+      type: "GET",
+      url: "https://www.socialcreator.com/dom/aviso_leido.php?idusu=35554364",
+      data: "avle="+id
+     });
+}
+function falert(cad)
+{
+    document.getElementById("modaltxt").innerHTML=cad;
+    document.getElementById('divmodal').style.display="block";
+}
+function fconfirm(cad,f,p)
+{
+    document.getElementById("modaltxtconfirm").innerHTML=cad;
+    $("#btnmodalok").prop('onclick',null).off('click');    $("#btnmodalok").click(function() {
+        $('#divmodalconfirm').hide();
+                if(f.indexOf('@')!=-1)
+        {
+            f=f.split("@");
+            if(f.length==3){self.frames[f[0]][f[1]][f[2]](p);}
+            else if(f.length==2){self.frames[f[0]][f[1]](p);};
+        }
+        else
+        {
+            window[f](p);
+        };
+      });
+    document.getElementById('divmodalconfirm').style.display="block";
+}
+jQuery(function( $ )
+{
+    
+        var menu = $( "#tmenu" );
+    var menu_aux = $( "#tmenu_aux" );
+    var originalMenuTop = -1;
+    var view = $( window );
+        
+    function rewrite_menu()
+    {
+                                var w_scr = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+                var element=document.getElementById("idmenu");
+        var ocultar_resto=false;
+        var i_ini=1;        for(var i=i_ini;i<element.children.length-1;i++)
+        {
+            element.children[i].style.display='';
+        };
+        document.getElementById("seccmas").style.display='none';
+        var w=0;
+        if(i_ini==2){w+=element.children[0].offsetWidth+element.children[1].offsetWidth;}
+        else if(i_ini==1){w+=element.children[0].offsetWidth;};
+        
+                
+        for(var i=i_ini;i<element.children.length-1;i++)
+        {
+            if(ocultar_resto){element.children[i].style.display='none';}
+            else
+            {
+                var w_aux=element.children[i].offsetWidth;
+                var w_mas=42;
+                if((i+1)==(element.children.length-1)){w_mas=0;}                                                if(i==i_ini || ((w+w_aux+w_mas)<=w_scr))
+                {
+                    element.children[i].style.display='';
+                    w+=w_aux;
+                }
+                else
+                {
+                                        ocultar_resto=true;
+                    element.children[i].style.display='none';
+                    document.getElementById("seccmas").style.display='';
+                }
+            }
+        };
+        };
+        rewrite_menu();
+    $(window).load(function(){rewrite_menu();});
+    
+    view.bind(
+        "resize",
+        rewrite_menu
+        );
+    
+            view.bind(
+            "scroll resize",
+            function()
+            {
+                if(originalMenuTop==-1){originalMenuTop=menu.offset().top;};
+                var viewTop = view.scrollTop();
+                                if(viewTop > originalMenuTop)
+                {
+                    if(!menu.is( ".fijo" ))
+                    {
+                        menu.removeClass('defecto').addClass('fijo');
+                        menu_aux.removeClass('defecto_aux').addClass('fijo_aux');
+                    }
+                }
+                else if(!menu.is( ".defecto" ))
+                {
+                    menu.removeClass('fijo').addClass('defecto');
+                    menu_aux.removeClass('fijo_aux').addClass('defecto_aux');
+                    originalMenuTop=menu.offset().top;                }
+            });
+    });
+</script>
+</head>
+<body>
+    <table id="tcab_aux">
+    <tr>
+    <td id="tcab_td_aux"></td>
+    </tr>
+    </table>
+    <table id="tcab" style="background-color:#F5F5F5;width:100%;z-index:101;border-bottom:1px solid #BDBDBD;">    <tr>
+                <td id="btnslide" style="width:1%;"><i class="material-icons" style="cursor:pointer;font-size:20px;position:relative;top:2px;margin-left:10px;color:#9E9E9E;" onclick="fslide(1);"></i></td>
+                <td style="padding:0;"><table style="border:0px;width:auto;margin-left:10px;" colspacing="0">
+        <tr>
+                    <td><a href="https://www.socialcreator.com/cibraslz"><img id="imgcab" style="border:0px;" alt="CIBRA SLZ logo" src="https://www.socialcreator.com/srv/imgs/gen/79765_ico.png"></a></td>
+                            <td id="lema" style="padding:5px;color:#212121;">CIBRA SLZ</td>
+                </tr>
+        </table></td>
+                <td style="color:#FFFFFF;" align ="right">
+                <table style="border:0px">
+        <tr>
+                    <td class="hoverlight tdicotop" style="cursor:pointer;" onclick="$('#avisos').toggle();event.stopPropagation();"><i class='fa fa-bell'></i></td>
+                </tr>
+        </table>
+                       <div id="avisos" class="w3-dropdown-content w3-border" style="z-index:99;">
+            <table style="border:0;width:100%;">
+            <tr>
+            <td align ="right" onClick="$('#avisos').hide();event.stopPropagation();">
+            <i class="fa fa-times" style="cursor:pointer;margin:5px;"></i>
+            </td>
+                        </tr>
+            <tr><td style="height:1px;background-color:#CCCCCC;padding:0;"></td></tr>
+            </table>
+            
+                                  <span class="w3-padding">There is no news</span>
+                           </div>
+                        </td>
+        </tr>
+    </table>
+    <table id="tmenu_aux" class="defecto_aux">
+    <tr>
+    <td id="tmenu_td_aux"></td>
+    </tr>
+    </table>
+    <table id="tmenu" class="defecto" style="z-index:101;" cellpadding="0" cellspacing="0">
+    <tr><td>
+    <table id="tmenu_2" cellpadding="0" cellspacing="0">
+    <tr id="idmenu">
+            <td id="btnhome" style="width:1%;" align="center"><a href="https://www.socialcreator.com/cibraslz"><i class="material-icons" style="font-size:20px;position:relative;top:2px;margin:0 10px;"></i></a></td>
+            <td id="secc287436" nowrap align="center">
+            <table class="topcmain" onmousedown="self.location='https://www.socialcreator.com/cibraslz/?s=287436';" cellpadding="0" cellspacing="0">
+            <tr class="imgmenu"><td align="center" style="padding:0 10px 0 10px;"><img class="imgmenu2" src="https://www.socialcreator.com/srv/imgs/seccs/287436_ico.png?ts=1731488520" style="border:0px;"></td></tr>            <tr class="txtmenu"><td align="center" style="padding:0 10px 0 10px;font-size:16px;">CIBRA SLZ</td></tr>            </table></a>
+        </td>
+        <td id="seccmas" class="topcmain" style="display:none;" align="center" onclick="fslide(1);"><i class="material-icons" style="font-size:20px;position:relative;top:2px;margin:0 10px 0 10px;"></i></td>
+    </tr>
+    </table>
+    </td></tr>
+    </table>
+    <script language="javascript">
+    function fslide(modo)
+    {
+        var px=0;
+        if(modo==0){px=-1000;};
+        document.getElementById("tslide").style.left=px+"px";
+    }
+    </script>
+    <div id="tslide" style="height:100%;overflow-x:hidden;overflow-y:auto;position:fixed;top:0px;left:-1000px;z-index:102;transition:left 0.2s ease;">
+    <table class="w3-card-4" id="tslide_2">
+    <tr>
+        <td align="right" style="padding-right:20px;"><a style="text-decoration:none;font-size:28px;" href="javascript:var v=fslide(0);">×</a></td>
+    </tr>
+            <tr><td style="white-space:nowrap;">
+            <table class="topcmain_sl" onmousedown="self.location='https://www.socialcreator.com/cibraslz/?s=287436';">
+            <tr>
+            <td class="imgmenu_sl" style="width:40px;" align="center"><img src="https://www.socialcreator.com/srv/imgs/seccs/287436_ico.png?ts=1731488520" style="border:0px;max-width:40px;max-height:40px;"></td>            <td class="txtmenu_sl" style="padding:0 15px 0 5px;font-size:16px;">CIBRA SLZ</td>            </tr>
+            </table>
+        </td></tr>
+        </table>
+    </div>
+<div id="divmodal" class="modal" style="display:none;" onclick="this.style.display='none';">
+  <div id="divmodalcontent" class="modal-content">
+    <span class="close">×</span>
+    <p id="modaltxt"></p>
+  </div>
+</div>
+<div id="divmodalconfirm" class="modal" style="display:none;">
+  <div class="modal-content">
+    <p id="modaltxtconfirm"></p>
+    <button class="w3-btn w3-small w3-blue-grey" id="btnmodalok">OK</button>
+    <button class="w3-btn w3-small w3-light-grey" style="margin-left:10px;" onclick="$('#divmodalconfirm').hide();">Cancel</button>
+  </div>
+</div>
+<script>
+function fzoom(dir)
+{
+    document.getElementById("divmodalcontent").style.marginTop="2%";    document.getElementById("modaltxt").innerHTML="<div align='center'><img src='"+dir+"' style='border:0;max-width:100%;'></div>";
+    $('#divmodal').show();
+}
+</script>
+    <div>
+            <div class="w3-row">
+        <div class="w3-col m12" style="padding:10px;">            <audio class=" w3-animate-top w3-left" style="max-width:100%;width:100%;" controls>
+                <source src="https://mcdn.loudme.ai/web-cdn/audio/mp3/audio-Xp-nd7wqhr4enC6jwfiih.mp3">
+            </audio>
+            </div>        </div>
+            <div class="w3-row">
+        <div class="w3-col m3 w3-center" style="padding:10px;">        <div class="centrado1">
+        <div class="centrado2">
+                    <div class=""><a rel="nofollow" href="https://forms.office.com/r/c2xwgAHkjq?"><img src="https://www.socialcreator.com/srv/imgs/ti_imgs/183000_287436.png" class=" w3-circle w3-card-8 w3-card w3-animate-left w3-tiny" style="max-width:100%;"></a></div>        </div>
+        </div>
+    </div><div class="w3-col m3 w3-center" style="padding:10px;">        <div class="centrado1">
+        <div class="centrado2">
+                    <div class=""><a rel="nofollow" href="https://forms.office.com/r/vhrz50sREY"><img src="https://www.socialcreator.com/srv/imgs/ti_imgs/183004_287436.png" class=" w3-circle w3-card-8 w3-animate-right" style="max-width:100%;"></a></div>        </div>
+        </div>
+    </div><div class="w3-col m3 w3-center" style="padding:10px;">        <div class="centrado1">
+        <div class="centrado2">
+                    <div class=""><a rel="nofollow" href="https://cibrafertil.sharepoint.com/sites/prd-cibra/Paginas/holerite.aspx"><img src="https://www.socialcreator.com/srv/imgs/ti_imgs/183976_287436.png" class=" w3-circle w3-card-8 w3-animate-left" style="max-width:100%;"></a></div>        </div>
+        </div>
+    </div><div class="w3-col m3 w3-center" style="padding:10px;">        <div class="centrado1">
+        <div class="centrado2">
+                    <div class=""><a href="https://www.socialcreator.com/cibraslz/?s=287507"><img src="https://www.socialcreator.com/srv/imgs/ti_imgs/183943_287436.png" class=" w3-circle w3-card-8 w3-animate-right" style="max-width:100%;"></a></div>        </div>
+        </div>
+    </div>        </div>
+            <div class="w3-row">
+        <div class="w3-col m6 w3-center" style="padding:10px;">        <div class="centrado1">
+        <div class="centrado2">
+                    <div class=""><a rel="nofollow" href="https://forms.office.com/pages/responsepage.aspx?id=0bG3FS2QSkKi8QTMugwrBMTPUhRQP_lFl6M-x7HWpc5UMEwxVjEySVRPSUxIM041MjIwWDJBOUpRVCQlQCN0PWcu&route=shorturl"><img src="https://www.socialcreator.com/srv/imgs/ti_imgs/183941_287436.png" class=" w3-circle w3-card-8" style="max-width:100%;"></a></div>        </div>
+        </div>
+    </div><div class="w3-col m6 w3-center" style="padding:10px;">        <div class="centrado1">
+        <div class="centrado2">
+                    <div class=""><a rel="nofollow" href="https://portal.folhacerta.com/login/"><img src="https://www.socialcreator.com/srv/imgs/ti_imgs/183942_287436.png" class=" w3-circle w3-card-8" style="max-width:100%;"></a></div>        </div>
+        </div>
+    </div>        </div>
+            <div class="w3-row">
+        <div class="w3-col m12 w3-center" style="padding:10px;">            <div class="w3-container w3-round w3-animate-opacity w3-xlarge" style="width:100%;background-color:#;border-color:#1e1e1e;">
+              
+                                        <p style="color:#FFFFFF;">Pagina não oficial</p>
+            </div>        </div>        </div>
+            <div class="w3-row">
+        <div class="w3-col m12" style="padding:10px;">
+            <div class=" w3-medium w3-left"><div class="w3-display-container">
+                <img src="https://www.socialcreator.com/srv/imgs/ti_imgs/183292_287436.png" class=" w3-circle" style="max-width:100%;">
+            <div class="w3-text-white w3-display-bottomleft w3-medium w3-container"><p>REINALDO</p></div></div>    <div class="w3-container">
+    <p style="font-weight:bold;color:#FFFFFF;">Colaborador Cibra - São Luís</p>
+</div></div></div>        </div>
+        </div>
+<br><br><br>
+</body>
+</html>
