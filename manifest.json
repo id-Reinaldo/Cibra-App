@@ -16,5 +16,10 @@
       "sizes": "512x512",
       "type": "image/png"
     }
+  ],
+  "web_accessible_resources": [
+    "icon-192x192.png",
+    "icon-512x512.png",
+    "public/font/ProximaNova-Reg-webfont.woff2"
   ]
 }

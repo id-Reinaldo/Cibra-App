@@ -22,7 +22,7 @@
    <div  class="principal">
        <center>
            <a href="https://cibrafertil.sharepoint.com/sites/prd-cibra/Paginas/holerite.aspx"><img src="img/holerite.png" alt=""></a> 
-           <a href="https://www.socialcreator.com/cibraslz/?s=287507"><img src="img/pesquisas.png" alt=""></a>
+           <a href="pesquisas.html"><img src="img/pesquisas.png" alt=""></a>
       </center>
     </div>
     <div class="principal"> 
@@ -35,6 +35,17 @@
   </div> 
 </center>
     <link rel="index" href="/index.json">
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js').then((registration) => {
+                    console.log('ServiceWorker registrado com sucesso: ', registration.scope);
+                }).catch((error) => {
+                    console.log('Falha ao registrar o ServiceWorker: ', error);
+                });
+            });
+        }
+    </script>
 </body>
 <footer>
 <img id="dev" src="img/reinaldo.png" alt=""><br>
