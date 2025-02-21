@@ -21,5 +21,13 @@
     "icon-192x192.png",
     "icon-512x512.png",
     "public/font/ProximaNova-Reg-webfont.woff2"
+  ],
+  "id": "Cibraslz",
+  "description": "Aplicativo agregador de formulários",
+  "categories": [
+    "navigation",
+    "productivity",
+    "social",
+    "utilities"
   ]
 }
