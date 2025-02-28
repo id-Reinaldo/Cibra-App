@@ -42,6 +42,41 @@
 <meta property="twitter:title" content="CIBRA SLZ" />
 <meta property="twitter:description" content="Pagina não oficial" />
 <meta property="twitter:image" content="icons\icon-72x72.png" />
+
+    <script>
+        let deferredPrompt;
+
+        window.addEventListener('beforeinstallprompt', (e) => {
+            // Impede o mini-infobar de aparecer no celular
+            e.preventDefault();
+            // Guarda o evento para que possamos acioná-lo mais tarde
+            deferredPrompt = e;
+            // Atualiza a interface do usuário para notificar o usuário que ele pode instalar o PWA
+            showInstallPromotion();
+        });
+
+        function showInstallPromotion() {
+            const installBanner = document.getElementById('installBanner');
+            installBanner.style.display = 'block';
+
+            const installButton = document.getElementById('installButton');
+            installButton.addEventListener('click', () => {
+                // Oculta o banner de instalação
+                installBanner.style.display = 'none';
+                // Mostra o prompt de instalação
+                deferredPrompt.prompt();
+                // Espera o usuário responder ao prompt
+                deferredPrompt.userChoice.then((choiceResult) => {
+                    if (choiceResult.outcome === 'accepted') {
+                        console.log('Usuário aceitou a instalação');
+                    } else {
+                        console.log('Usuário rejeitou a instalação');
+                    }
+                    deferredPrompt = null;
+                });
+            });
+        }
+    </script>
 </head>
 <body>
     <center>
@@ -71,6 +106,10 @@
         <a id="linkocult" href="https://api.whatsapp.com/send?text=https://cibraslz.netlify.app/"><img src="icons/share.png" alt=""><br><h6>COMPARTILHAR</h6></a>
     </div> 
     </center>
+    <div id="installBanner" style="display: none; position: fixed; bottom: 0; width: 100%; background: #0fdb00; color: white; text-align: center; padding: 10px;">
+        <p>Instale nosso app para uma melhor experiência!</p>
+        <button id="installButton" style="background: white; color: #0fdb00; border: none; padding: 10px;">Instalar</button>
+    </div>
 </body>
 <footer>
     <img id="dev" src="img/reinaldo.png" alt=""><br>
